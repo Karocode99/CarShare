@@ -9,7 +9,8 @@ body {
     --classic-button: red;
     --white-button: white;
     --transparent-button: transparent;
-    --gray-text: #6A6A6A
+    --gray-text: #6A6A6A;
+    --service-text: #B2B2B2;
 }
 
 * {
@@ -88,7 +89,7 @@ body {
     flex-direction: column;
     z-index: 1;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
 }
 
 .banner-title {
@@ -156,213 +157,144 @@ body {
     justify-content: center;
 }
 
-/* BLOG
+/* BLOG*/
 
-.blog .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 139px;
-}
-.blog-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
+
 
 .title {
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 47px;
+    font: normal normal bold 35px/47px Nunito Sans;
     text-transform: uppercase;
-    text-align: center;
+    margin: 91px 10px 35px 10px;
     position: relative;
-    margin-bottom: 35px;
-    font-family: Nunito Sans, sans-serif;
-}
-.blog-body-title {
-    font-size: 19px;
-    line-height: 27px;
-    font-weight: 400;
-    color: var(--gray-text);
-    text-transform: uppercase;
-    margin-top: 25px;
-}
-.blog-body-text {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 300;
-    color: var(--gray-text);
-    margin-bottom: 15px;
-    padding: 15px 0;
-}
-
-.blog-box .buttony {
-    font-size: 14px;
-    line-height: 19px;
-    padding: 11px 29px;
 }
 .title::before, .title::after {
     content: "";
-    position: absolute;
+    background: #FF0000 no-repeat padding-box;
     width: 50px;
     height: 3px;
-    background-color: var(--classic-button);
+    box-shadow: 0px 1px 6px #FF00004D;
+    border-radius: 8px;
+    position: absolute;
 }
-
 .title::before {
     left: -60px;
-    top: 23px;
+    top: 21px;
 }
-
 .title::after {
     right: -60px;
-    top: 23px;
+    top: 21px;
 }
 
-
-
-.blog .container {
+.blog-body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
 }
-
-.blog-boxes {
-    display: flex;
-}
-
-.blog-box-title {
-    font-size: 19px;
-    line-height: 27px;
-    font-weight: 400;
-    color: var(--text-color);
-    text-transform: uppercase;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-*/
-
-/* BLOG START */
-
-.blog .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.blog-boxes {
-    display: flex;
-    padding-bottom: 100px;
-}
-
-.blog-box-title {
-    font-size: 19px;
-    line-height: 27px;
-    font-weight: 400;
+.blog-body-title {
+    text-align: left;
+    font: normal normal normal 19px/26px Nunito Sans;
     color: var(--gray-text);
-    text-transform: uppercase;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin: 25px 0 15px 0;
 }
-
-.blog-box-text {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 300;
+.blog-body-text {
+    text-align: left;
+    font: normal normal 300 14px/19px Open Sans;
     color: var(--gray-text);
-    margin-bottom: 15px;
+    margin-bottom: 26px;
 }
 
-.blog-box .buttony {
-    font-size: 14px;
-    line-height: 19px;
+.blog .button-red {
+    box-sizing: border-box;
     padding: 11px 29px;
+    font: normal normal bold 14px/19px Nunito Sans;
 }
 
-/* BLOG END */
-
-/* SECTION TITLE START */
-
-.section-title {
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 47px;
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    margin-top: 91px;
-    margin-bottom: 35px;
-    font-family: Nunito Sans, sans-serif;
-}
-
-.section-title::before, .section-title::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background-color: var(--classic-button);
-}
-
-.section-title::before {
-    left: -60px;
-    top: 23px;
-}
-
-.section-title::after {
-    right: -60px;
-    top: 23px;
-}
-
-/*Service
- */
+/* SERVICE */
 
 .service {
-    background-color: #28272C;
-    padding-bottom: 30px;
-}
-.service .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 100px;
-    margin-bottom: 100px;
+    background:#28272C;
 }
 
-.service-boxes {
-    display: flex;
-    margin-bottom: 100px;
-}
-.service-box {
-    justify-content: center;
-    align-items: center;
-}
-.service .section-title{
+.service .title {
+    margin: 60px 0 75px 0;
     color: var(--white-button)
 }
 
-.service-box-title {
-    font-size: 19px;
-    line-height: 27px;
-    font-weight: 400;
-    color: var(--white-button);
+.service-body {
+    display: flex;
+    gap: 45px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+
+}
+.service-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.service-body-title {
     text-transform: uppercase;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    text-align: left;
+    font: normal normal normal 19px/26px Nunito Sans;
+    color: var(--service-text);
+    margin: 25px 0 15px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-body-text {
+    text-align: center;
+    font: normal normal normal 14px/19px Open Sans;
+    color: var(--service-text);
+    margin-bottom: 26px;
 }
 
-.service-box-text {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 300;
-    color: var(--white-button);
-    margin-bottom: 15px;
-}
-
-.service-box .buttony {
-    font-size: 14px;
-    line-height: 19px;
+.service .button-red {
+    box-sizing: border-box;
     padding: 11px 29px;
+    font: normal normal bold 14px/19px Nunito Sans;
 }
+
+/*CONTACT*/
+
+.contact .title {
+    margin: 60px 0 75px 0;
+    color: var(--white-button)
+}
+
+.contact-body {
+    display: flex;
+    gap: 45px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-img {
+    left: 231px;
+    width: 444px;
+    height: 317px;
+}
+.contact-form #name, #email, #message, .check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 444px;
+}
+.check {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 0;
+}
+
+
+
